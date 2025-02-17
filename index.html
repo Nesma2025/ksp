@@ -94,6 +94,7 @@
         <li><a onclick="showTable('subsurface')">3. Subsurface Drip Line</a></li>
         <li><a onclick="showTable('sprinkler')">4. Sprinkler</a></li>
         <li><a onclick="showTable('detail')">5. Detail Drawings</a></li>
+	<li><a onclick="showTable('pumproom')">5. Pump Room</a></li>
     </ul>
 </nav>
 
@@ -383,6 +384,30 @@
             </div>
         </div>
 
+  </table>
+            </div>
+            <div id="pumproom-6.0" class="hidden">
+                <h3>Pump Room - Project 6.0</h3>
+                <table>
+                    <tr>
+                        <th>No.</th>
+                        <th>Drawing Number</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><a href="#">KSP-6.0-005</a></td>
+                        <td>Detail Drawing 6.0</td>
+                        <td>C</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+
+
         <!-- Tables for Project 6.10 -->
         <div id="project-6.10" class="hidden">
             <div id="mainline-6.10" class="hidden">
@@ -571,6 +596,26 @@
                 </table>
             </div>
         </div>
+
+<div id="pumproom-6.10" class="hidden">
+                <h3>Pump Room - Project 6.10</h3>
+                <table>
+                    <tr>
+                        <th>No.</th>
+                        <th>Drawing Number</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><a href="#">KSP-6.10-005</a></td>
+                        <td>Pump Room 6.10</td>
+                        <td>C</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
     </main>
 
     <script>
@@ -578,7 +623,7 @@
             let project = document.getElementById("projectSelect").value;
 
             // Hide all tables
-            document.querySelectorAll("div[id^='mainline'], div[id^='bubbler'], div[id^='subsurface'], div[id^='sprinkler'], div[id^='detail']").forEach(table => {
+            document.querySelectorAll("div[id^='mainline'], div[id^='bubbler'], div[id^='subsurface'], div[id^='sprinkler'], div[id^='detail', div[id^='pumproom']]").forEach(table => {
                 table.classList.add('hidden');
             });
 
@@ -590,7 +635,7 @@ function showTable(section) {
     let project = document.getElementById("projectSelect").value;
 
     // Hide all tables
-    document.querySelectorAll("div[id^='mainline'], div[id^='bubbler'], div[id^='subsurface'], div[id^='sprinkler'], div[id^='detail']").forEach(table => {
+    document.querySelectorAll("div[id^='mainline'], div[id^='bubbler'], div[id^='subsurface'], div[id^='sprinkler'], div[id^='detail'], div[id^='pumproom']").forEach(table => {
         table.classList.add('hidden');
     });
 
